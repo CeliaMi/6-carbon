@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbono - ¿Cómo soy?</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/como-soy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="carbon-nav">
+        <div class="title-nav-container">
+        <a href="https://celiami.github.io/periodic-table-project/" class="back-arrow" title="¿Volver a la tabla?">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="carbon-title-nav">
+            6.Carbono
+        </div>
+    </div>
+        <div class="mobile-active-tab como-soy-tab">¿Cómo soy?</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="" class="active nonmetal-tab">¿Cómo soy?</a></li>
+            <li><a href="" class="noble-tab">¿Dónde estoy?</a></li>
+            <li><a href="" class="alkali-tab">¿Cuál es mi Historia?</a></li>
+            <li><a href="" class="halogen-tab">¿Jugamos?</a></li>
+            <li><a href="" class="transition-tab">Creadoras</a></li>
+        </ul>
+    </nav>
+
+    <main class="como-soy">
+        <section class="container">
+            <h2>Hola, me presento, soy el Carbono 🤭</h2>
+
+            <div class="two-column-section">
+                <div class="column-content">
+                    <iframe src="https://giphy.com/embed/mJm6nVIf96cBpBNskS" frameBorder="0" allowFullScreen></iframe>
+                </div>
+                <div class="column-content">
+                    <p>
+                        Soy el <span>número 6</span> en la tabla periódica. ¿Eso significa que fui el sexto en llegar? Pues no, ese número se refiere a mis protones. Es decir la cantidad de bolas rojas que tengo. Aunque no fui el sexto, llevo dando vueltas por el universo desde hace más de 3.800 millones de años...
+
+                    </p>
+                </div>
+            </div>
+
+            <p>Se cree que llegué a la Tierra montado en un <span>meteorito</span></p>
+
+            <div class="info">
+                <div class="info-content">
+                    <p>No es por presumir pero...</p>
+                    <h2> fui literalmente un milagro caído del cielo.</h2>
+                </div>
+            </div>
+            <div class="two-column-section">
+                <div class="column-content">
+                    <p>
+                        <span>Todo lo que está vivo</span> tiene un poco de mí... ¡Sí, todo! Plantas,
+                        animales, tú, yo (bueno, yo entero, jeje), estamos hechos de moléculas basadas en carbono. Sin mí, no habría árboles, ni pizzas... ¡soy la base de la vida! 
+                    </p>
+                </div>
+                <!-- gif pizza -->
+                <div class="column-content">
+                    <img src="https://media.tenor.com/VWAZosGBC6AAAAAM/hellmo-pizza.gif" alt="Pizza">
+                </div>
+            </div>
+
+
+
+            <button onclick="mostrarPoder()">🧙‍♂️¿Quieres conocer mi superpoder?</button>
+            
+            <!-- Modal -->
+            <div id="superpoderModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                        <div class="column-content">
+                            <h3>¡Doy voz a los ecos del pasado!🧙‍♂️ </h3>
+                            <p>El carbono puede contar historias que sucedieron hace miles de años.Sí, así como lo lees.
+                            <p>Gracias a la prueba del carbono-14,
+                                podemos dar voz a los que callaron hace siglos, reconstruir cenas prehistóricas, descubrir
+                                especies y mundos como el de los mamuts o los dinosaurios...</p>
+
+                            <p>El carbono no solo forma parte de la vida.
+                                <span>También guarda su memoria.</span>
+                            </p>
+                            </p>
+                        </div>
+                        <div class="column-content">
+                            <div class="gif-container">
+                                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmE3OHBmdDV3MGpuMzlvNmpyOW91OWlod3ZwZTF3eW9uNTRqM2JibyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ClAgX4E1UGxCU/giphy.gif"
+                                    alt="Muestra de carbono" class="carbon-image">
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Audio element for mystical music -->
+            <audio id="mysticalMusic" loop>
+                <source src="./public/music/Agnus Dei X - Bitter Suite - Kevin MacLeod.mp3" type="audio/mpeg" alt="Agnus Dei X - Bitter Suite de Kevin MacLeod tiene una licencia Atribución 4.0 de Creative Commons. https://creativecommons.org/licenses/by/4.0/
+
+                Fuente: http://www.amazon.com/Agnus-Dei-X/dp/B00QGC7W3Y
+                
+                Artista: http://incompetech.com/">
+            </audio>
+        </section>
+    </main>
+
+    <script src="./src/js/como-soy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+/* Estilos específicos para como-soy.html */
+
+.como-soy {
+    background-color: var(--color-nonmetal);
+    min-height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.como-soy .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.como-soy h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.como-soy p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.como-soy span {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.como-soy strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.como-soy img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 1.5rem 0;
+    display: block;
+}
+
+.como-soy iframe {
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    display: block;
+}
+
+.como-soy button {
+    background-color: var(--color-nonmetal);
+    color: #2c3e50;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 1.5rem auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.como-soy button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    background-color: #FF8FA9; 
+}
+
+.como-soy button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-content h2, .info-content p {
+    text-align: center;
+    color: white;
+}
+
+.info{
+    position: relative;
+    width: 100%;
+    margin-left: -50%;
+    margin-right: -50%;
+    background: linear-gradient(rgba(18, 124, 173, 0.4), rgba(0, 0, 0, 0.7)),
+                url( "https://images.unsplash.com/photo-1516060267783-f090cad05ac8?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+#superpoder {
+    background-color: var(--color-noble-gas);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-nonmetal);
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .como-soy .container {
+        padding: 1.5rem;
+    }
+    
+    .como-soy h2 {
+        font-size: 2.2rem;
+    }
+    
+    .como-soy p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .como-soy .container {
+        padding: 1rem;
+    }
+    
+    .como-soy h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .como-soy p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .como-soy {
+        padding: 1rem 0;
+    }
+    
+    .como-soy .container {
+        padding: 0.8rem;
+    }
+    
+    .como-soy h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .como-soy p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .como-soy img {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .como-soy h2 {
+        font-size: 1.6rem;
+    }
+    
+    .como-soy p {
+        font-size: 0.9rem;
+    }
+} 
