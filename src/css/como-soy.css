@@ -230,6 +230,10 @@
         margin: 0.5vh auto;
         padding: 1rem;
     }
+    /* Ocultar la pestaña activa en el menú móvil */
+    .carbon-nav ul li a.nonmetal-tab {
+        display: none;
+    }
 }
 
 /* Responsive */

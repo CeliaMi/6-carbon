@@ -146,8 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const modal = this.closest('.modal');
             if (modal.id === 'result-modal') {
                 closeResultModal();
-            } else {
-                toggleLegend();
+            } else if (modal.id === 'legend-modal') {
+                modal.style.display = 'none';
             }
         });
     });
@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target === this) {
                 if (this.id === 'result-modal') {
                     closeResultModal();
-                } else {
-                    toggleLegend();
+                } else if (this.id === 'legend-modal') {
+                    this.style.display = 'none';
                 }
             }
         });

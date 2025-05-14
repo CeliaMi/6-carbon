@@ -213,6 +213,11 @@ h1{
         font-size: 1.8rem;
         margin-bottom: 1.2rem;
     }
+
+    /* Ocultar la pestaña activa en el menú móvil */
+    .carbon-nav ul li a.halogen-tab {
+        display: none;
+    }
 }
 
 .color-legend {

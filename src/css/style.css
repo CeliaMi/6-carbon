@@ -86,6 +86,7 @@
     text-align: center;
     margin-left: 0.5rem;
     border-color: var(--color-nonmetal);
+    text-decoration: none;
 
   }
 .carbon-nav ul {
