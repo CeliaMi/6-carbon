@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbono - ¿Jugamos?</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/jugamos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="carbon-nav">
+        <div class="title-nav-container">
+        <a href="https://celiami.github.io/periodic-table-project/#table-section" class="back-arrow" title="¿Volver a la tabla?">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="carbon-title-nav">
+            6.Carbono
+        </div>
+    </div>
+        <div class="mobile-active-tab jugamos-tab">¿Jugamos?</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="../index.html" class="nonmetal-tab">¿Cómo soy?</a></li>
+            <li><a href="" class="noble-tab">¿Dónde estoy?</a></li>
+            <li><a href="" class="alkali-tab">¿Cuál es mi Historia?</a></li>
+            <li><a href="" class="active halogen-tab">¿Jugamos?</a></li>
+            <li><a href="" class="transition-tab">Creadoras</a></li>
+        </ul>
+    </nav>
+    <main class="jugamos">
+        <section class="container">
+            <h1>Adivina...</h1>
+            <div class="wordle-container">
+                <p>Una palabra de 5 letras relacionada con el carbono:</p>
+                <button class="legend-btn" onclick="toggleLegend()">
+                     👁 Reglas del juego 👁
+                </button>
+                <div id="wordle-board"></div>
+                <input id="wordle-input" class="wordle-input" maxlength="5" type="text" autocomplete="off" placeholder="Palabra...">
+                <button id="wordle-btn" class="wordle-btn">Probar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para la leyenda -->
+    <div id="legend-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="toggleLegend()">&times;</span>
+            <h3 class="modal-game-title">Reglas del juego</h3>
+            <div class="color-legend">
+                <div class="legend-item">
+                    <div class="legend-color correct">A</div>
+                    <span>correcta - posición correcta</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color present">A</div>
+                    <span>correcta - posición incorrecta</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color absent">A</div>
+                    <span>Incorrecta 100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para resultados -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-message"></div>
+            <div id="dino-celebration" class="dino-celebration">
+                <div class="celebration-text">¡ROOOOAR!</div>
+                <img src="https://i.pinimg.com/originals/a0/d3/b3/a0d3b37107cd46be9bbba1ca8d42a715.gif" alt="Dinosaurio celebrando" class="dino-gif">
+            </div>
+        </div>
+    </div>
+
+
+    <audio id="thunderstorm-sound" preload="auto">
+        <source src="../public/music/Thunderstorm-Long.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="../src/js/jugamos.js"></script>
+</body>
+</html> 
