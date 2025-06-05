@@ -36,15 +36,18 @@
     </nav>
     <main class="jugamos">
         <section class="container">
-            <h1>Adivina...</h1>
+            <h1>¡Ya esta bien de leer!</h1>
             <div class="wordle-container">
-                <p>Una palabra de 5 letras relacionada con el carbono:</p>
+                <p>¿Que tal si nos divertimos un poco?</p>
+                <p>Adivina a adivinanza... piensa enuna palabra de 5 letras relacionada con el carbono</p>
                 <button class="legend-btn" onclick="toggleLegend()">
-                     👁 Reglas del juego 👁
+                     👁 ¿Cómo jugar? 👁
                 </button>
                 <div id="wordle-board"></div>
-                <input id="wordle-input" class="wordle-input" maxlength="5" type="text" autocomplete="off" placeholder="Palabra...">
-                <button id="wordle-btn" class="wordle-btn">Probar</button>
+                <div class="wordle-input-container">
+                    <input id="wordle-input" class="wordle-input" maxlength="5" type="text" autocomplete="off" placeholder="Escribe aquí tu palabra...">
+                    <button id="wordle-btn" class="wordle-btn">Probar</button>
+                </div>
             </div>
         </section>
     </main>
@@ -53,19 +56,29 @@
     <div id="legend-modal" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="toggleLegend()">&times;</span>
-            <h3 class="modal-game-title">Reglas del juego</h3>
-            <div class="color-legend">
-                <div class="legend-item">
-                    <div class="legend-color correct">A</div>
-                    <span>correcta - posición correcta</span>
+            <h3 class="modal-game-title">¿Cómo jugar?</h3>
+            <div class="rules-container">
+                <div class="rule-section">
+                    <h4>🎯 Objetivo</h4>
+                    <p>Adivina la palabra de 5 letras relacionada con el carbono. Tienes 6 intentos para descubrirla.</p>
                 </div>
-                <div class="legend-item">
-                    <div class="legend-color present">A</div>
-                    <span>correcta - posición incorrecta</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color absent">A</div>
-                    <span>Incorrecta 100%</span>
+                
+                <div class="rule-section">
+                    <h4>📝 Instrucciones</h4>
+                        <div class="color-legend">
+                        <div class="legend-item">
+                            <div class="legend-color correct">A</div>
+                            <span>Verde: La letra está en la palabra y en la posición correcta</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color present">A</div>
+                            <span>Amarillo: La letra está en la palabra pero en otra posición</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color absent">A</div>
+                            <span>Gris: La letra no está en la palabra</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,8 +90,8 @@
             <span class="modal-close">&times;</span>
             <div id="modal-message"></div>
             <div id="dino-celebration" class="dino-celebration">
-                <div class="celebration-text">¡ROOOOAR!</div>
-                <img src="https://i.pinimg.com/originals/a0/d3/b3/a0d3b37107cd46be9bbba1ca8d42a715.gif" alt="Dinosaurio celebrando" class="dino-gif">
+                <div class="celebration-text">¡CUANTA SABIDURIA!</div>
+                <img src="https://media.tenor.com/Aind6W80t_4AAAAM/cat-kitty.gif" alt="gif-tormenta" class="dino-gif">
             </div>
         </div>
     </div>

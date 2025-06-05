@@ -34,6 +34,7 @@ function renderBoard() {
         }
         board.appendChild(row);
     }
+    updateKeyboardState();
 }
 
 function playDinoSound() {
@@ -164,6 +165,98 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Crear teclado virtual para móviles
+    if (window.innerWidth <= 768) {
+        createVirtualKeyboard();
+    }
     
     renderBoard();
-}); 
+});
+
+function createVirtualKeyboard() {
+    const keyboard = document.createElement('div');
+    keyboard.className = 'virtual-keyboard';
+    
+    const keys = [
+        'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ',
+        'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'BACKSPACE'
+    ];
+    
+    keys.forEach(key => {
+        const keyElement = document.createElement('div');
+        keyElement.className = 'key';
+        if (key === 'ENTER') {
+            keyElement.classList.add('enter');
+            keyElement.textContent = 'Enter';
+            keyElement.addEventListener('click', () => checkGuess());
+        } else if (key === 'BACKSPACE') {
+            keyElement.classList.add('backspace');
+            keyElement.textContent = '⌫';
+            keyElement.addEventListener('click', () => {
+                const input = document.getElementById('wordle-input');
+                input.value = input.value.slice(0, -1);
+            });
+        } else {
+            keyElement.textContent = key;
+            keyElement.addEventListener('click', () => {
+                const input = document.getElementById('wordle-input');
+                if (input.value.length < 5) {
+                    input.value += key.toLowerCase();
+                }
+            });
+        }
+        keyboard.appendChild(keyElement);
+    });
+    
+    document.querySelector('.wordle-container').appendChild(keyboard);
+}
+
+function updateKeyboardState() {
+    if (window.innerWidth > 768) return;
+    
+    const keyboard = document.querySelector('.virtual-keyboard');
+    if (!keyboard) return;
+    
+    const keys = keyboard.querySelectorAll('.key');
+    keys.forEach(key => {
+        if (key.classList.contains('enter') || key.classList.contains('backspace')) return;
+        
+        const letter = key.textContent.toLowerCase();
+        const letterState = getLetterState(letter);
+        
+        key.className = 'key';
+        if (letterState) {
+            key.classList.add(letterState);
+        }
+    });
+}
+
+function getLetterState(letter) {
+    let state = null;
+    attempts.forEach(attempt => {
+        const normalizedAttempt = normalizeWord(attempt);
+        const normalizedWord = normalizeWord(WORD);
+        
+        for (let i = 0; i < 5; i++) {
+            if (normalizedAttempt[i] === letter) {
+                if (normalizedWord[i] === letter) {
+                    state = 'correct';
+                } else if (normalizedWord.includes(letter) && state !== 'correct') {
+                    state = 'present';
+                } else if (!state) {
+                    state = 'absent';
+                }
+            }
+        }
+    });
+    return state;
+}
+
+// Modificar la función renderBoard para actualizar el estado del teclado
+const originalRenderBoard = renderBoard;
+renderBoard = function() {
+    originalRenderBoard();
+    updateKeyboardState();
+}; 
