@@ -384,6 +384,8 @@ main{
     transition: transform 0.5s ease;
 }
 
+
+
 .image-container:hover img {
     transform: scale(1.05);
 }
