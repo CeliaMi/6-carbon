@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbono - ¿Cuál es mi Historia?</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/historia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+</head>
+<body>
+  <nav class="carbon-nav">
+    <div class="title-nav-container">
+    <a href="https://celiami.github.io/periodic-table-project/#table-section" class="back-arrow" title="¿Volver a la tabla?">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <a href="/6-carbon" class="carbon-title-nav">
+   
+        6.Carbono</a>
+    
+</div>
+    <div class="mobile-active-tab jugamos-tab">¿Jugamos?</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <ul>
+        <li><a href="/6-carbon" class="nonmetal-tab">¿Cómo soy?</a></li>
+        <li><a href="/6-carbon/pages/donde-estoy.html" class="noble-tab">¿Dónde estoy?</a></li>
+        <li><a href="/6-carbon/pages/historia.html" class="active alkali-tab">¿Cuál es mi Historia?</a></li>
+        <li><a href="/6-carbon/pages/jugamos.html" class=" halogen-tab">¿Jugamos?</a></li>
+        <li><a href="/6-carbon/pages/jugamos.html" class="transition-tab">Creadoras</a></li>
+    </ul>
+</nav>
+    <main class="historia">
+        <section class="container">
+            <div class="historia-seccion fade-in">
+                <p>El carbono tiene mil y una historias, comencemos por esta...</p>
+                <h2>¿Qué tiene que ver una tormenta con un lápiz? </h2>
+              
+                <p>
+                  Aunque suene a cuento, el origen del lápiz empieza con una tormenta. En 1564, cayó un rayo sobre un árbol cerca de Borrowdale, Inglaterra. Al remover la tierra, unos pastores descubrieron un misterioso material negro. No era carbón. Era <strong>grafito</strong>: puro y suave.
+                  Los pastores pensaron.... UAAAAA es perfecto para... ¡marcar ovejas! 
+                </p>
+                  <div class="column-content">
+                    <img src="https://media1.tenor.com/m/ERMB-TGU4UAAAAAC/wink-yes.gif" alt="Sheep">
+                  </div>
+              
+                <p>
+                  Al principio se usaba para marcar objetos o animales, hasta que artos de ensuciarse las manos a alguien se le ocurrió envolver el grafito con madera. Así nació el antepasado del lápiz moderno...
+                </p>
+              
+                <p>
+                  En aquellos tiempos, tener un lápiz era casi como tener un Rolls-Royce. 🚗
+                  El grafito inglés era tan puro que se consideraba un lujo. De hecho, los primeros lápices eran pintados de <strong>amarillo brillante</strong> simbolo de aristrocratia 💛
+                </p>
+
+                <!-- Mapa Leaflet localizaciones -->
+                <div id="map"></div>  
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../src/js/historia.js"></script>
+</body>
+</html> 

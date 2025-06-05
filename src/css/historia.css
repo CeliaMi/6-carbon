@@ -1,0 +1,178 @@
+/* Estilos específicos para historia.html */
+
+.historia {
+    background-color: var(--color-alkali-metal);
+    min-height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.historia .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.historia-seccion {
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.historia h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.historia p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.historia strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.historia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    margin: 1.5rem 0;
+    display: block;
+}
+
+/* Estilos para el mapa */
+#map {
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    margin: 2rem 0;
+    height: 400px;
+    width: 100%;
+}
+
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.column-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .historia .container {
+        padding: 1.5rem;
+    }
+    
+    .historia h2 {
+        font-size: 1.8rem;
+    }
+    
+    .historia p {
+        font-size: 1.05rem;
+    }
+    
+    .historia-seccion {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .historia .container {
+        padding: 1rem;
+    }
+    
+    .historia h2 {
+        font-size: 1.6rem;
+    }
+    
+    .historia p {
+        font-size: 1rem;
+    }
+    
+    .historia-seccion {
+        padding: 1.2rem;
+    }
+    
+    #map {
+        height: 350px;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .historia {
+        padding: 1rem 0;
+    }
+    
+    .historia .container {
+        padding: 0.8rem;
+    }
+    
+    .historia h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .historia p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .historia-seccion {
+        padding: 1rem;
+    }
+    
+    #map {
+        height: 300px;
+        margin: 1rem 0;
+    }
+    
+    .historia img {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .historia h2 {
+        font-size: 1.3rem;
+    }
+    
+    .historia p {
+        font-size: 0.9rem;
+    }
+    
+    #map {
+        height: 250px;
+    }
+} 
