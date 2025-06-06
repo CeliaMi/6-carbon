@@ -411,3 +411,60 @@ main{
     }
 }
 
+/* Estilos para la flecha de navegación */
+.next-page-arrow {
+    position: relative;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.next-page-arrow.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.next-page-arrow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.next-page-arrow i {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Asegurar que la flecha sea visible en todas las páginas */
+.como-soy .next-page-arrow,
+.donde-estoy .next-page-arrow,
+.historia .next-page-arrow,
+.jugamos .next-page-arrow {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .next-page-arrow {
+        width: 40px;
+        height: 40px;
+        margin: 1.5rem auto;
+    }
+    
+    .next-page-arrow i {
+        font-size: 1.2rem;
+    }
+}
+
