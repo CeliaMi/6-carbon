@@ -271,7 +271,10 @@ main{
         transform: translateY(-8px) rotate(-45deg);
     }
     
-
+    /* Ocultar el elemento activo en el menú móvil */
+    .carbon-nav ul li a.active {
+        display: none;
+    }
     
     /* Mantener visible el enlace activo */
     .mobile-active-tab {
