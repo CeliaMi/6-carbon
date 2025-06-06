@@ -1,0 +1,372 @@
+.donde-estoy {
+    background-color: var(--color-noble-gas);
+    min-height: 100vh;
+    padding: 2rem 0;
+    width: 100%;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    overflow: visible;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.donde-estoy h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    padding: 0 1rem;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    overflow: visible;
+    flex: 1;
+}
+
+.card {
+    aspect-ratio: 1/1;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.element-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0);
+}
+
+.element-number {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 1rem;
+}
+
+.element-symbol {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card:hover .card-inner {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .element-overlay {
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.card.flipped .element-symbol {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 12px solid var(--color-nonmetal);
+}
+
+.card-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .card-front img {
+    transform: scale(1.1);
+}
+
+.card.flipped .card-front {
+    filter: brightness(1.2);
+}
+
+.card.flipped .card-front::after {
+    opacity: 0;
+}
+
+.card-back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-back h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-back p {
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.author-credit {
+    font-size: 0.8rem !important;
+    color: #95a5a6 !important;
+    margin-top: auto !important;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .donde-estoy h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card-front {
+        border-width: 10px;
+    }
+    
+    .element-symbol {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card-front {
+        border-width: 8px;
+    }
+    
+    .element-symbol {
+        font-size: 4rem;
+    }
+    
+    .card-back h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .element-symbol {
+        font-size: 3.5rem;
+    }
+    
+    .element-number {
+        font-size: 1.2rem;
+    }
+    
+    .card-back h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card-back p {
+        font-size: 0.95rem;
+    }
+    
+    .card-front {
+        border-width: 6px;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+    
+    .card {
+        max-width: 100%;
+    }
+    
+    .element-symbol {
+        font-size: 3.2rem;
+    }
+    
+    .element-number {
+        font-size: 1.1rem;
+    }
+    
+    .card-back h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .card-back p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+    
+    .author-credit {
+        font-size: 0.9rem !important;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-front {
+        border-width: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cards-container {
+        max-width: 280px;
+    }
+    
+    .element-symbol {
+        font-size: 2.8rem;
+    }
+    
+    .element-number {
+        font-size: 1rem;
+    }
+    
+    .card-back h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-back p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    .author-credit {
+        font-size: 0.85rem !important;
+    }
+    
+    .card-front {
+        border-width: 6px;
+    }
+}
