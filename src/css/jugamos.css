@@ -475,6 +475,12 @@ h1{
 }
 
 @media (max-width: 480px) {
+
+    h1{
+        font-size: 2.5rem;
+        margin: 2rem;
+        text-align: center;
+    }
     .wordle-cell {
         width: min(2.8rem, 18vw);
         height: min(2.8rem, 18vw);
@@ -499,6 +505,18 @@ h1{
         font-size: 1rem;
         padding: 0.6rem 0.8rem;
     }
+
+    .wordle-board {
+        padding: 0rem;
+        margin: 0rem;
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+   .container{
+    padding: 0rem;
+    margin: 0.5rem 0rem;
+   }
 }
 
 .color-legend {

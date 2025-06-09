@@ -88,14 +88,6 @@
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Estilos específicos para la flecha en la página de historia */
-.historia .next-page-arrow {
-    display: flex;
-    margin: 2rem auto;
-    position: relative;
-    z-index: 1000;
-}
-
 /* Responsive */
 @media (max-width: 992px) {
     .historia .container {

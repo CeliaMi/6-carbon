@@ -34,8 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.body.scrollHeight <= window.innerHeight) {
             nextPageArrow.classList.add('visible');
         }
-
-        // Force check after a short delay to handle dynamic content
-        setTimeout(checkScroll, 1000);
     }
 }); 

@@ -1,0 +1,293 @@
+.creadoras {
+    background-color: var(--color-transition-metal);
+    min-height: 100vh;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.creadoras .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el diseño de dos columnas */
+.two-column-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 3rem 0;
+    align-items: center;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.creator-card {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.creator-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.creator-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.connect-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-noble-gas);
+    border-radius: 50%;
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    background-color: var(--color-nonmetal);
+    transform: translateY(-3px);
+}
+
+.creator-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 8px solid white;
+}
+
+.creator-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .creadoras .container {
+        padding: 2rem;
+    }
+    
+    .creator-card h3 {
+        font-size: 2rem;
+    }
+    
+    .creator-card p {
+        font-size: 1.1rem;
+    }
+    
+    .creator-image img {
+        width: 280px;
+        height: 280px;
+        border-width: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .creadoras .container {
+        padding: 1.5rem;
+    }
+    
+    .two-column-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .creator-card {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .creator-image img {
+        width: 250px;
+        height: 250px;
+        border-width: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .creadoras {
+        padding: 1.5rem 0;
+    }
+    
+    .creadoras .container {
+        padding: 1rem;
+    }
+    
+    .creator-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .creator-card p {
+        font-size: 1rem;
+    }
+    
+    .creator-image img {
+        width: 220px;
+        height: 220px;
+        border-width: 4px;
+    }
+}
+
+@media (max-width: 360px) {
+    .creator-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .creator-card p {
+        font-size: 0.95rem;
+    }
+    
+    .creator-image img {
+        width: 200px;
+        height: 200px;
+        border-width: 3px;
+    }
+}
+
+/* Estilos para la sección de agradecimientos */
+.gratitude-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.gratitude-section h3 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.gratitude-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+}
+
+.gratitude-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gratitude-list li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #34495e;
+}
+
+.gratitude-list li::before {
+    content: "❤";
+    position: absolute;
+    left: 0;
+    color: var(--color-nonmetal);
+}
+
+.gratitude-message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 2rem 6rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .gratitude-section {
+        margin-top: 3rem;
+        padding: 1.5rem;
+    }
+    
+    .gratitude-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    .gratitude-section p,
+    .gratitude-list li {
+        font-size: 1rem;
+    }
+    
+    .gratitude-message {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .gratitude-section {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    
+    .gratitude-section h3 {
+        font-size: 1.6rem;
+    }
+    
+    .gratitude-list {
+        margin: 1.5rem auto;
+    }
+    
+    .gratitude-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+} 
