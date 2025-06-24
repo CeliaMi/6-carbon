@@ -290,4 +290,89 @@
         font-size: 0.95rem;
         margin-bottom: 0.8rem;
     }
+}
+
+/* Estilos para el botón de retorno */
+.return-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.return-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #FF4700, #FF6B35);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 71, 0, 0.3);
+    border: 2px solid transparent;
+}
+
+.return-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 71, 0, 0.5);
+    background: linear-gradient(135deg, #FF6B35, #FF4700);
+
+}
+
+.return-button i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.return-button:hover i {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.return-button span {
+    white-space: nowrap;
+}
+
+/* Responsive para el botón de retorno */
+@media (max-width: 768px) {
+    .return-section {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
+    
+    .return-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .return-button i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .return-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .return-button i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .return-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        gap: 0.6rem;
+    }
+    
+    .return-button i {
+        font-size: 1rem;
+    }
 } 
